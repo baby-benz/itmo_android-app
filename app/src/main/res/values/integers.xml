@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="natural">0</integer>
+    <integer name="fibonacci">0</integer>
+    <integer name="next_fibonacci">1</integer>
+    <integer name="collatz">33</integer>
+</resources>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:screenOrientation="portrait">
+
+    <LinearLayout
+        android:id="@+id/slow_progress_box"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/task2_progress_bar_height"
+        android:background="@drawable/squared_border"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/fast_progress_box"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.example.myapplication.ui.CustomProgressBar
+            android:id="@+id/slow_progress_bar"
+            android:layout_width="@dimen/task2_progress_bar_width"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:padding="@dimen/task2_progress_bar_padding" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/squared_border"
+            android:orientation="vertical"
+            android:padding="1dp">
+
+            <Button
+                android:id="@+id/button_slow_speed_up"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="@dimen/task2_speed_button_size"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="top|center_horizontal"
+                android:padding="0dp"
+                android:text="@string/task_2_button_speed_up"
+                android:textColor="@color/black"
+                android:textSize="@dimen/task2_speed_button_text_size"
+                tools:ignore="DuplicateSpeakableTextCheck" />
+
+            <TextView
+                android:id="@+id/text_view_slow_speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/task_2_slow_speed"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/button_slow_slow_down"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="@dimen/task2_speed_button_size"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="bottom|center_horizontal"
+                android:padding="0dp"
+                android:text="@string/task_2_button_slow_down"
+                android:textColor="@color/black"
+                android:textSize="@dimen/task2_speed_button_text_size"
+                tools:ignore="DuplicateSpeakableTextCheck" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fast_progress_box"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/task2_progress_bar_height"
+        android:background="@drawable/squared_border"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/run_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/slow_progress_box">
+
+        <com.example.myapplication.ui.CustomProgressBar
+            android:id="@+id/fast_progress_bar"
+            android:layout_width="@dimen/task2_progress_bar_width"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:padding="@dimen/task2_progress_bar_padding" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/squared_border"
+            android:orientation="vertical"
+            android:padding="1dp">
+
+            <Button
+                android:id="@+id/button_fast_speed_up"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="@dimen/task2_speed_button_size"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="top|center_horizontal"
+                android:padding="0dp"
+                android:text="@string/task_2_button_speed_up"
+                android:textColor="@color/black"
+                android:textSize="@dimen/task2_speed_button_text_size" />
+
+
+            <TextView
+                android:id="@+id/text_view_fast_speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/task_2_fast_speed"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/button_fast_slow_down"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="@dimen/task2_speed_button_size"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="bottom|center_horizontal"
+                android:padding="0dp"
+                android:text="@string/task_2_button_slow_down"
+                android:textColor="@color/black"
+                android:textSize="@dimen/task2_speed_button_text_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/run_button"
+        android:layout_width="@dimen/task2_start_stop_reset_buttons_width"
+        android:layout_height="@dimen/buttons_height_default"
+        android:text="@string/task_2_button_run"
+        app:layout_constraintBottom_toTopOf="@id/stop_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/stop_button"
+        android:layout_width="@dimen/task2_start_stop_reset_buttons_width"
+        android:layout_height="@dimen/buttons_height_default"
+        android:text="@string/task_2_button_stop"
+        app:layout_constraintBottom_toTopOf="@id/reset_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/reset_button"
+        android:layout_width="@dimen/task2_start_stop_reset_buttons_width"
+        android:layout_height="@dimen/buttons_height_default"
+        android:layout_marginBottom="@dimen/margin_default"
+        android:text="@string/task_2_button_reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

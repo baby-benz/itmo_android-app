@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_default">20dp</dimen>
+    <dimen name="padding_default">20dp</dimen>
+    <dimen name="task1_fab_size">72dp</dimen>
+    <dimen name="task1_bottom_buttons_width">130dp</dimen>
+    <dimen name="buttons_height_default">60dp</dimen>
+    <dimen name="task1_image_size">50dp</dimen>
+    <dimen name="task1_switch_box_height">36dp</dimen>
+    <dimen name="task1_top_frame_padding">12dp</dimen>
+    <dimen name="task1_detailed_image_size">100dp</dimen>
+    <dimen name="task1_detailed_buttons_width">100dp</dimen>
+    <dimen name="task1_detailed_icon_size">40dp</dimen>
+    <dimen name="task1_detailed_title_image_top_margin">10dp</dimen>
+    <dimen name="task1_detailed_padding_vertical">40dp</dimen>
+    <dimen name="task1_label_height">20dp</dimen>
+    <dimen name="task1_update_label_text_size">11sp</dimen>
+    <dimen name="task1_update_label_height">28dp</dimen>
+    <dimen name="task1_top_box_height">436dp</dimen>
+    <dimen name="task2_speed_button_size">60dp</dimen>
+    <dimen name="task2_speed_button_text_size">28sp</dimen>
+    <dimen name="task2_progress_bar_padding">16dp</dimen>
+    <dimen name="task2_progress_bar_height">120dp</dimen>
+    <dimen name="task2_progress_bar_width">240dp</dimen>
+    <dimen name="task2_start_stop_reset_buttons_width">120dp</dimen>
+</resources>

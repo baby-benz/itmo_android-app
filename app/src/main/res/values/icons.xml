@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="task1_detailed_icons">
+        <item>@drawable/ic_cannon_colored</item>
+        <item>@drawable/ic_howitzer</item>
+        <item>@drawable/ic_mortar</item>
+        <item>@drawable/ic_rocket_artillery</item>
+    </array>
+</resources>

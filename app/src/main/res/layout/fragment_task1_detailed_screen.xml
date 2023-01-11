@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding_default">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/task1_detailed_image_size"
+        android:layout_height="@dimen/task1_detailed_image_size"
+        android:src="@drawable/ic_solomons_knot"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="@dimen/task1_detailed_image_size"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/task1_detailed_title_image_top_margin"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image" />
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="@dimen/task1_detailed_icon_size"
+        android:layout_height="@dimen/task1_detailed_icon_size"
+        android:layout_marginStart="@dimen/margin_default"
+        android:contentDescription="@string/task_1_detailed_icon_description"
+        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_default"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintTop_toBottomOf="@+id/icon"
+        tools:text="Текст" />
+
+    <TextView
+        android:id="@+id/text_view_natural"
+        android:layout_width="@dimen/task1_detailed_buttons_width"
+        android:layout_height="wrap_content"
+        android:freezesText="true"
+        android:gravity="center"
+        android:text="@string/task_1_detailed_text_view_natural"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_view_fibonacci"
+        android:layout_width="@dimen/task1_detailed_buttons_width"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_default"
+        android:freezesText="true"
+        android:gravity="center"
+        android:text="@string/task_1_detailed_text_view_fibonacci"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/text_view_natural"
+        app:layout_constraintRight_toLeftOf="@id/text_view_collatz"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_view_collatz"
+        android:layout_width="@dimen/task1_detailed_buttons_width"
+        android:layout_height="wrap_content"
+        android:freezesText="true"
+        android:gravity="center"
+        android:text="@string/task_1_detailed_text_view_collatz"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_natural"
+        android:layout_width="@dimen/task1_detailed_buttons_width"
+        android:layout_height="wrap_content"
+        android:text="@string/task_1_detailed_button_natural"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_view_natural" />
+
+    <Button
+        android:id="@+id/button_fibonacci"
+        android:layout_width="@dimen/task1_detailed_buttons_width"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_default"
+        android:text="@string/task_1_detailed_button_fibonacci"
+        app:layout_constraintLeft_toRightOf="@id/button_natural"
+        app:layout_constraintRight_toLeftOf="@id/button_collatz"
+        app:layout_constraintTop_toBottomOf="@id/text_view_fibonacci" />
+
+    <Button
+        android:id="@+id/button_collatz"
+        android:layout_width="@dimen/task1_detailed_buttons_width"
+        android:layout_height="wrap_content"
+        android:text="@string/task_1_detailed_button_collatz"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_view_collatz" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

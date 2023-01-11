@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Мое Приложение</string>
+    <string name="menu_task_1">Задание 1</string>
+    <string name="menu_task_2">Задание 2</string>
+    <string name="menu_task_3">Задание 3</string>
+    <string name="incrementer_toolbar_label">Счетчик Баллов</string>
+    <string name="task_1_detailed_toolbar_label">Детали</string>
+    <string name="task_1_button_zoom_in">Увеличить картинку</string>
+    <string name="task_1_button_zoom_out">Отдалить картинку</string>
+    <string name="task_1_switch_change_color">Инвертировать цвет фона</string>
+    <string name="task_1_button_hide_list">Скрыть список</string>
+    <string name="task_1_button_show_list">Показать список</string>
+    <string name="task_1_edit_text_label">Редактировать лейбл</string>
+    <string name="task_1_edit_text_label_error">Лейбл не может быть пустым</string>
+    <string name="task_1_text_view_label">Лейбл</string>
+    <string name="task_1_button_label_update">Обновить</string>
+    <string name="task_1_image_description">Картинку, которую можно увеличивать и уменьшать</string>
+    <string name="task_1_fab_description">Плавающая кнопка, показывающая Snackbar</string>
+    <string name="task_1_detailed_text_view_collatz_error">1 - последнее число последовательности</string>
+    <string name="task_1_detailed_text_view_max_number_error">Достигнуто максимальное поддерживаемое число</string>
+    <string name="task_1_detailed_button_natural">Нат</string>
+    <string name="task_1_detailed_button_fibonacci">Фиб</string>
+    <string name="task_1_detailed_button_collatz">Кол</string>
+    <string name="task_1_detailed_icon_description">Иконка элемента</string>
+    <string name="task_2_button_run">Старт</string>
+    <string name="task_2_button_stop">Стоп</string>
+    <string name="task_2_button_reset">Сброс</string>
+    <string name="task_2_max_speed_error">Достигнута максимальная скорость</string>
+    <string name="task_2_min_speed_error">Достигнута минимальная скорость</string>
+    <string name="task3_empty_list_text">Инвентарь пуст</string>
+    <string name="task_3_button_edit">Редактировать</string>
+    <string name="task_3_producer_text_view">Производитель</string>
+    <string name="task_3_supplier_text_view">Поставщик</string>
+    <string-array name="artillery">
+        <item>Пушка</item>
+        <item>Гаубица</item>
+        <item>Мортира</item>
+        <item>Реактивная артиллерия</item>
+    </string-array>
+</resources>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tasks_graph"
+    app:startDestination="@id/incrementer">
+
+    <fragment
+        android:id="@+id/incrementer"
+        android:name="com.example.myapplication.fragment.task1.IncrementerFragment"
+        android:label="@string/incrementer_toolbar_label"
+        tools:layout="@layout/fragment_incrementer" />
+    <fragment
+        android:id="@+id/task_1"
+        android:name="com.example.myapplication.fragment.task1.Task1Fragment"
+        android:label="@string/menu_task_1"
+        tools:layout="@layout/fragment_task1">
+        <action
+            android:id="@+id/detailsData"
+            app:destination="@id/list_item_details">
+            <argument
+                android:name="iconId"
+                android:defaultValue="-1"
+                app:argType="integer" />
+            <argument
+                android:name="title"
+                android:defaultValue="Dummy Title"
+                app:argType="string" />
+            <argument
+                android:name="description"
+                android:defaultValue="Dummy Description"
+                app:argType="string" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/list_item_details"
+        android:name="com.example.myapplication.fragment.task1.ListItemDetailsFragment"
+        android:label="@string/task_1_detailed_toolbar_label">
+        <argument
+            android:name="iconId"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <argument
+            android:name="title"
+            android:defaultValue="Dummy Title"
+            app:argType="string" />
+        <argument
+            android:name="description"
+            android:defaultValue="Dummy Description"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/task_2"
+        android:name="com.example.myapplication.fragment.task2.Task2Fragment"
+        android:label="@string/menu_task_2" />
+    <fragment
+        android:id="@+id/task_3"
+        android:name="com.example.myapplication.fragment.task3.Task3Fragment"
+        android:label="@string/menu_task_3">
+        <action
+            android:id="@+id/createProduct"
+            app:destination="@+id/createProductCardDialog"/>
+        <action
+            android:id="@+id/productDetails"
+            app:destination="@id/productCardDialog">
+            <argument
+                android:name="iconId"
+                android:defaultValue="@drawable/ic_skull"
+                app:argType="reference" />
+            <argument
+                android:name="product"
+                app:argType="com.example.myapplication.contract.task3.data.dto.ProductResponse" />
+            <argument
+                android:name="productPosition"
+                android:defaultValue="-1"
+                app:argType="integer" />
+        </action>
+    </fragment>
+    <dialog
+        android:id="@+id/productCardDialog"
+        android:name="com.example.myapplication.fragment.task3.Task3ProductCardDialog"
+        android:label="ProductCardDialog">
+        <argument
+            android:name="iconId"
+            android:defaultValue="@drawable/ic_skull"
+            app:argType="reference" />
+        <argument
+            android:name="productPosition"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <argument
+            android:name="product"
+            app:argType="com.example.myapplication.contract.task3.data.dto.ProductResponse" />
+        <action
+            android:id="@+id/filterableList"
+            app:destination="@id/filterableListDialog">
+            <argument
+                android:name="entityList"
+                app:argType="string[]" />
+        </action>
+    </dialog>
+    <dialog
+        android:id="@+id/createProductCardDialog"
+        android:name="com.example.myapplication.fragment.task3.Task3CreateProductCardDialog"
+        android:label="ProductCardDialog">
+        <action
+            android:id="@+id/filterableList"
+            app:destination="@id/filterableListDialog">
+            <argument
+                android:name="entityList"
+                app:argType="string[]" />
+        </action>
+    </dialog>
+    <dialog
+        android:id="@+id/filterableListDialog"
+        android:name="com.example.myapplication.fragment.task3.Task3FilterableListDialog"
+        android:label="FilterableListDialog">
+        <argument
+            android:name="entityList"
+            app:argType="string[]" />
+        <argument
+            android:name="stateKey"
+            app:argType="string" />
+    </dialog>
+</navigation>

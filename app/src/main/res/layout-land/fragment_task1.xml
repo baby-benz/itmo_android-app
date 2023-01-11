@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding_default">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/top_box"
+            android:layout_width="400dp"
+            android:layout_height="0dp"
+            android:background="@drawable/squared_border"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:padding="@dimen/task1_top_frame_padding">
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="@dimen/task1_image_size"
+                    android:layout_height="@dimen/task1_image_size"
+                    android:contentDescription="@string/task_1_image_description"
+                    android:src="@drawable/ic_solomons_knot" />
+
+                <Button
+                    android:id="@+id/button_zoom_in_out"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/buttons_height_default"
+                    android:layout_gravity="bottom"
+                    android:backgroundTint="@color/white"
+                    android:padding="4dp"
+                    android:text="@string/task_1_button_zoom_in"
+                    android:textColor="@color/black"
+                    app:strokeColor="@color/black"
+                    app:strokeWidth="1dp" />
+            </FrameLayout>
+
+            <ListView
+                android:id="@+id/list_view"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="6"
+                android:entries="@array/artillery" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_view_label"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/task1_label_height"
+            android:layout_marginStart="@dimen/margin_default"
+            android:background="@drawable/squared_border"
+            android:freezesText="true"
+            android:gravity="center"
+            android:text="@string/task_1_text_view_label"
+
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/top_box"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/update_label_box"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/task1_update_label_height"
+            android:layout_marginStart="@dimen/margin_default"
+            android:background="@drawable/squared_border"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@id/switch_box"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/top_box"
+            app:layout_constraintTop_toBottomOf="@id/text_view_label">
+
+            <EditText
+                android:id="@+id/edit_text_label"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
+                android:autofillHints="Label"
+                android:background="@drawable/squared_border"
+                android:hint="@string/task_1_edit_text_label"
+                android:inputType="text"
+                android:paddingHorizontal="4dp"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/task1_update_label_text_size"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/button_update_label"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="3"
+                android:backgroundTint="@color/white"
+                android:padding="0dp"
+                android:text="@string/task_1_button_label_update"
+                android:textColor="@color/black"
+                android:textSize="@dimen/task1_update_label_text_size"
+                tools:ignore="TouchTargetSizeCheck" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/switch_box"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/task1_switch_box_height"
+            android:layout_marginStart="@dimen/margin_default"
+            app:layout_constraintBottom_toTopOf="@id/buttons_box"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/top_box"
+            app:layout_constraintTop_toBottomOf="@id/update_label_box">
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_change_color"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:thumb="@drawable/custom_thumb"
+                app:track="@drawable/custom_track"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/text_view_change_color"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="@string/task_1_switch_change_color"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/buttons_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_default"
+            android:baselineAligned="false"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/top_box">
+
+            <Button
+                android:id="@+id/button_hide_show_list"
+                android:layout_width="@dimen/task1_bottom_buttons_width"
+                android:layout_height="@dimen/buttons_height_default"
+                android:backgroundTint="@color/white"
+                android:text="@string/task_1_button_hide_list"
+                android:textColor="@color/black"
+                app:strokeColor="@color/black"
+                app:strokeWidth="1dp" />
+
+            <Button
+                android:id="@+id/button_toast"
+                android:layout_width="@dimen/task1_bottom_buttons_width"
+                android:layout_height="@dimen/buttons_height_default"
+                android:backgroundTint="@color/white"
+                android:text="@string/task_1_button_toast"
+                android:textColor="@color/black"
+                app:strokeColor="@color/black"
+                app:strokeWidth="1dp" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="@dimen/task1_fab_size"
+        android:layout_height="@dimen/task1_fab_size"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="@dimen/margin_default"
+        android:contentDescription="@string/task_1_fab_description"
+        android:src="@drawable/ic_cannon"
+        app:backgroundTint="@color/white"
+        app:fabCustomSize="@dimen/task1_fab_size" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

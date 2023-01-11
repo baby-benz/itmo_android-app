@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="menu_task_1">Task 1</string>
+    <string name="menu_task_2">Task 2</string>
+    <string name="menu_task_3">Task 3</string>
+    <string name="incrementer_toolbar_label">Points Counter</string>
+    <string name="task_1_detailed_toolbar_label">Details</string>
+    <string name="incrementer_button_decrement" translatable="false">-</string>
+    <string name="incrementer_button_increment" translatable="false">+</string>
+    <string name="task_1_button_zoom_in">Zoom in picture</string>
+    <string name="task_1_button_zoom_out">Zoom out picture</string>
+    <string name="task_1_switch_change_color">Invert background color</string>
+    <string name="task_1_button_toast" translatable="false">Toast</string>
+    <string name="task_1_button_hide_list">Hide List</string>
+    <string name="task_1_button_show_list">Show List</string>
+    <string name="task_1_edit_text_label">Edit label</string>
+    <string name="task_1_text_view_label">Label</string>
+    <string name="task_1_button_label_update">Update</string>
+    <string name="task_1_image_description">Image you can zoom in and out</string>
+    <string name="task_1_fab_description">Snackbar showing floating action button</string>
+    <string name="task_1_edit_text_label_error">Label couldn\'t be empty</string>
+    <string name="task_1_detailed_text_view_collatz_error">1 is the last number of the sequence</string>
+    <string name="task_1_detailed_text_view_max_number_error">The maximum supported number has been reached</string>
+    <string name="task_1_detailed_text_view_natural" translatable="false">0</string>
+    <string name="task_1_detailed_text_view_fibonacci" translatable="false">0</string>
+    <string name="task_1_detailed_text_view_collatz" translatable="false">33</string>
+    <string name="task_1_detailed_button_natural">Nat</string>
+    <string name="task_1_detailed_button_fibonacci">Fib</string>
+    <string name="task_1_detailed_button_collatz">Col</string>
+    <string name="task_1_detailed_icon_description">Element\'s icon</string>
+    <string name="task_2_button_run">Run</string>
+    <string name="task_2_button_speed_up" translatable="false">ᐃ</string>
+    <string name="task_2_button_slow_down" translatable="false">ᐁ</string>
+    <string name="task_2_button_stop">Stop</string>
+    <string name="task_2_button_reset">Reset</string>
+    <string name="task_2_max_speed_error">Max speed has been reached</string>
+    <string name="task_2_min_speed_error">Min speed has been reached</string>
+    <string name="task_2_slow_speed" translatable="false">5</string>
+    <string name="task_2_fast_speed" translatable="false">9</string>
+    <string name="task3_empty_list_text">Inventory is empty</string>
+    <string name="task_3_product_price" translatable="false">%1$f ₽</string>
+    <string name="task_3_button_edit">Edit</string>
+    <string name="task_3_producer_text_view">Producer</string>
+    <string name="task_3_supplier_text_view">Supplier</string>
+    <string name="task_3_save_product_button">Сохранить</string>
+    <string name="task_3_cancel_edit_button">Отмена</string>
+    <string-array name="artillery">
+        <item>Cannon</item>
+        <item>Howitzer</item>
+        <item>Mortar</item>
+        <item>Rocket artillery</item>
+    </string-array>
+</resources>
