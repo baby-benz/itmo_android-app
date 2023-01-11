@@ -42,8 +42,8 @@
     <string name="task_3_button_edit">Edit</string>
     <string name="task_3_producer_text_view">Producer</string>
     <string name="task_3_supplier_text_view">Supplier</string>
-    <string name="task_3_save_product_button">Сохранить</string>
-    <string name="task_3_cancel_edit_button">Отмена</string>
+    <string name="task_3_save_product_button">Save</string>
+    <string name="task_3_cancel_edit_button">Cancel</string>
     <string-array name="artillery">
         <item>Cannon</item>
         <item>Howitzer</item>

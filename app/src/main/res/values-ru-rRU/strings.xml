@@ -32,6 +32,8 @@
     <string name="task_3_button_edit">Редактировать</string>
     <string name="task_3_producer_text_view">Производитель</string>
     <string name="task_3_supplier_text_view">Поставщик</string>
+    <string name="task_3_save_product_button">Сохранить</string>
+    <string name="task_3_cancel_edit_button">Отмена</string>
     <string-array name="artillery">
         <item>Пушка</item>
         <item>Гаубица</item>
